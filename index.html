@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elliot Chong, Web Platform Architect &amp; AI-Native Engineer</title>
+  <meta name="description"
+    content="Resume of Elliot Chong, principal software engineer and web platform architect at Xbox: founding architect of Play Xbox and Xbox.JS, building AI-native developer experience." />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="canonical" href="https://elliotchong.github.io/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://elliotchong.github.io/" />
+  <meta property="og:title" content="Elliot Chong, Web Platform Architect &amp; AI-Native Engineer" />
+  <meta property="og:description"
+    content="Principal software engineer and web platform architect at Xbox: founding architect of Play Xbox and Xbox.JS, building AI-native developer experience." />
+  <meta property="og:image" content="https://elliotchong.github.io/og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;0,800&family=Barlow:wght@300;400;500;600;700;800&family=Barlow+Semi+Condensed:wght@400;500;600;700;800&family=EB+Garamond:ital,wght@1,400;1,500;1,600&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --blue: #1b75bc;
+      --blue-dark: #265a99;
+      --blue-soft: #cfdcef;
+      --ink: #2b2b2b;
+      --muted: #4a4a4a;
+      --dot: #b8b8b8;
+      --page-w: 8.5in;
+      --page-h: 11in;
+      --pad-l: 0.485in;
+      --pad-r: 0.38in;
+      --pad-y: 0.82in;
+      --sidebar-w: 1.5in;
+      --gutter: 1.145in;
+      --font-body: 'Source Sans 3', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+      --font-display: 'Barlow Semi Condensed', 'Barlow', 'Source Sans 3', -apple-system, sans-serif;
+      --font-display-wide: 'Barlow', 'Source Sans 3', -apple-system, sans-serif;
+      --font-serif: 'EB Garamond', Garamond, 'Times New Roman', serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      background: #e5e5e5;
+      color: var(--ink);
+      font-family: var(--font-body);
+      font-size: 9.5pt;
+      line-height: 1.42;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .page {
+      width: var(--page-w);
+      height: var(--page-h);
+      background: #fff;
+      margin: 24px auto;
+      box-shadow: 0 2px 18px rgba(0, 0, 0, 0.12);
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: var(--sidebar-w) 1fr;
+      column-gap: var(--gutter);
+      padding: var(--pad-y) var(--pad-r) var(--pad-y) var(--pad-l);
+    }
+
+    .page.page-2 {
+      padding-top: calc(var(--pad-y) - 0.06in);
+    }
+
+    /* ---------- Sidebar ---------- */
+    .sidebar {
+      position: relative;
+    }
+
+    /* Page 1 sidebar distributes its content vertically */
+    .sidebar.distribute {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .sidebar.distribute .role {
+      margin-top: 0.84in;
+    }
+
+    .sidebar.distribute .side-who {
+      margin-top: 0.74in;
+    }
+
+    .sidebar.distribute .side-connect {
+      margin-top: 0.57in;
+      padding-bottom: 0.2in;
+    }
+
+    /* Page 2 sidebar uses flex so EDUCATION anchors near bottom */
+    .page-2 .sidebar {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .page-2 .sidebar .side-section:last-child {
+      margin-top: auto !important;
+      padding-bottom: 0.2in;
+    }
+
+    .name-block {
+      background: var(--blue);
+      color: #fff;
+      padding: 38px 8px;
+      text-align: center;
+      letter-spacing: 0.5px;
+      width: 2.325in;
+      height: 0.985in;
+      margin-left: -0.315in;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .name-block h1 {
+      font-family: var(--font-display-wide);
+      font-size: 19pt;
+      font-weight: 600;
+      margin: 0;
+      line-height: 1.05;
+      letter-spacing: 0.3px;
+      white-space: nowrap;
+    }
+
+    .role {
+      position: relative;
+      text-align: center;
+      margin: 0 -0.04in;
+    }
+
+    .role .amp {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      transform: translateY(-50%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--blue-soft);
+      font-family: var(--font-serif);
+      font-size: 85pt;
+      font-weight: 400;
+      font-style: italic;
+      line-height: 1;
+      z-index: 0;
+      user-select: none;
+      pointer-events: none;
+      height: 1.0in;
+    }
+
+    .role .lines {
+      position: relative;
+      z-index: 1;
+    }
+
+    .role .lines span {
+      display: block;
+      font-family: var(--font-display);
+      color: var(--blue);
+      font-weight: 700;
+      font-size: 10pt;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      white-space: nowrap;
+      line-height: 1;
+    }
+
+    .role .lines span+span {
+      margin-top: 20px;
+    }
+
+    .side-section {
+      margin-top: 16px;
+    }
+
+    .side-section:first-of-type {
+      margin-top: 0;
+    }
+
+    .side-heading {
+      font-family: var(--font-display);
+      color: var(--blue);
+      font-weight: 800;
+      font-size: 16pt;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      margin: 0 0 4px;
+      line-height: 1.1;
+      white-space: nowrap;
+      overflow: visible;
+    }
+
+    .side-heading+.dots {
+      margin-bottom: 8px;
+    }
+
+    .side-section p {
+      margin: 0 0 11px;
+      font-size: 8.75pt;
+      color: var(--ink);
+      line-height: 1.45;
+    }
+
+    .side-section p:last-child {
+      margin-bottom: 0;
+    }
+
+    .side-section p b {
+      font-weight: 700;
+    }
+
+    .side-section ul {
+      list-style: none;
+      margin: 0 0 12px;
+      padding: 0;
+      font-size: 9.25pt;
+    }
+
+    .side-section li {
+      position: relative;
+      padding-left: 8px;
+      margin-bottom: 0;
+      line-height: 1.2;
+    }
+
+    .side-section li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--ink);
+    }
+
+    .sub-heading {
+      font-family: var(--font-display);
+      color: var(--ink);
+      font-weight: 800;
+      font-size: 11pt;
+      letter-spacing: 1.3px;
+      text-transform: uppercase;
+      margin: 10px 0 4px;
+      white-space: nowrap;
+    }
+
+    .sub-heading:first-child {
+      margin-top: 0;
+    }
+
+    .contact {
+      font-size: 9pt;
+    }
+
+    .contact .email {
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--ink);
+    }
+
+    .contact .links div {
+      line-height: 1.5;
+    }
+
+    .contact .links b {
+      font-weight: 700;
+    }
+
+    .edu-school {
+      font-weight: 700;
+      margin: 0 0 6px;
+      font-size: 11pt;
+      line-height: 1.18;
+    }
+
+    .edu-school .edu-loc {
+      font-weight: 400;
+      font-size: 10pt;
+      color: var(--ink);
+    }
+
+    .edu-degree {
+      margin: 0 0 6px;
+      font-size: 10pt;
+      font-weight: 700;
+      line-height: 1.22;
+    }
+
+    /* ---------- Main column ---------- */
+    .main {
+      position: relative;
+    }
+
+    .main-heading {
+      font-family: var(--font-display);
+      color: var(--blue);
+      font-weight: 700;
+      font-size: 18pt;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+      margin: 0 0 4px;
+      line-height: 1.1;
+    }
+
+    .main-heading .cont {
+      color: var(--blue);
+      font-weight: 400;
+    }
+
+    .dots {
+      display: block;
+      width: 100%;
+      border: 0;
+      height: 4px;
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='40' viewBox='0 0 100 40'><circle cx='20' cy='20' r='13' fill='%231b75bc'/></svg>");
+      background-size: 10px 4px;
+      background-repeat: repeat-x;
+      background-position: left center;
+      margin: 0 0 9px;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .job {
+      margin-top: 16px;
+      margin-bottom: 16px;
+    }
+
+    .job:last-child {
+      margin-bottom: 0;
+    }
+
+    .job-company {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 11pt;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      margin: 0;
+      color: var(--ink);
+    }
+
+    .job-company .sep {
+      color: var(--blue);
+      font-weight: 400;
+      margin: 0 6px;
+    }
+
+    .job-company .loc {
+      font-weight: 400;
+      letter-spacing: 1.3px;
+      font-size: 9pt;
+    }
+
+    .job-role {
+      margin: 1px 0 4px;
+      font-size: 9.25pt;
+      font-weight: 700;
+    }
+
+    .job-role .sep {
+      color: var(--blue);
+      font-weight: 400;
+      margin: 0 6px;
+    }
+
+    .job-role .dates {
+      font-weight: 400;
+      color: var(--ink);
+    }
+
+    .job p {
+      margin: 0 0 5px;
+      font-size: 8.75pt;
+      line-height: 1.36;
+    }
+
+    .job p:last-child {
+      margin-bottom: 0;
+    }
+
+    .job p i,
+    .job p em {
+      font-style: italic;
+    }
+
+    .job ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 5px;
+      font-size: 8.75pt;
+    }
+
+    .job ul li {
+      position: relative;
+      padding-left: 11px;
+      margin-bottom: 2px;
+      line-height: 1.34;
+    }
+
+    .job ul li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--ink);
+    }
+
+    .job ul li i,
+    .job ul li em {
+      font-style: italic;
+    }
+
+    .accomplishments-title {
+      font-weight: 700;
+      margin: 4px 0 2px;
+      font-size: 8.75pt;
+    }
+
+    .job-divider {
+      border: 0;
+      height: 3px;
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='40' viewBox='0 0 100 40'><circle cx='20' cy='20' r='13' fill='%23b8b8b8'/></svg>");
+      background-size: 9px 3px;
+      background-repeat: repeat-x;
+      background-position: left center;
+      margin: 3px 0;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    /* ---------- Web ---------- */
+    .web-bar {
+      width: var(--page-w);
+      margin: 24px auto -8px;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .web-bar a {
+      font-family: var(--font-display);
+      font-size: 10pt;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: #fff;
+      background: var(--blue);
+      padding: 8px 14px;
+      text-decoration: none;
+    }
+
+    .web-bar a:hover,
+    .web-bar a:focus-visible {
+      background: var(--blue-dark);
+    }
+
+    .contact a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .contact a:hover,
+    .contact a:focus-visible {
+      text-decoration: underline;
+    }
+
+    /* ---------- Print ---------- */
+    @page {
+      size: Letter;
+      margin: 0;
+    }
+
+    @media print {
+
+      html,
+      body {
+        background: #fff;
+      }
+
+      .page {
+        margin: 0;
+        box-shadow: none;
+        page-break-after: always;
+        break-after: page;
+      }
+
+      .page:last-child {
+        page-break-after: auto;
+        break-after: auto;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .web-bar {
+        display: none;
+      }
+    }
+
+    /* Scales the fixed-size pages down to fit narrow screens; --fit is set by the script below. */
+    @media screen {
+      body {
+        zoom: var(--fit, 1);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="web-bar" aria-label="Resume downloads">
+    <a href="Elliot_Chong_Resume.pdf" download>Download PDF</a>
+  </nav>
+
+  <!-- ============ PAGE 1 ============ -->
+  <section class="page" aria-label="Resume page 1">
+    <aside class="sidebar distribute">
+      <div class="name-block">
+        <h1>Elliot Chong</h1>
+      </div>
+
+      <div class="role" aria-hidden="false">
+        <div class="amp">&amp;</div>
+        <div class="lines">
+          <span>Web Platform Architect</span>
+          <span>AI-Native Engineer</span>
+        </div>
+      </div>
+
+      <div class="side-section side-who">
+        <h2 class="side-heading">Who is Elliot?</h2>
+        <hr class="dots" />
+        <p><b>An architect</b> with 20 years of experience building web platforms that let hundreds of engineers, and their agents, ship as one team.</p>
+        <p><b>A builder</b> of polished products who obsesses over the details: how fast something feels, how reliably it works, and how well it adapts to the device in front of the user.</p>
+        <p><b>An explorer</b> turning AI agents into dependable teammates through documentation-as-memory, validation gates, and software factories that verify their own work.</p>
+        <p><b>A designer-turned-engineer</b> that lives in the small craft decisions that distinguish a great product from a good one.</p>
+      </div>
+
+      <div class="side-section side-connect">
+        <h2 class="side-heading">Let’s Connect</h2>
+        <hr class="dots" />
+        <div class="contact">
+          <div class="email"><a href="mailto:elliotjameschong@gmail.com">elliotjameschong@gmail.com</a></div>
+          <div class="links">
+            <div><a href="https://www.linkedin.com/in/elliotchong"><b>linkedin</b>.com/in/elliotchong</a></div>
+            <div><a href="https://github.com/elliotchong"><b>github</b>.com/elliotchong</a></div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <h2 class="main-heading">Experience</h2>
+      <hr class="dots" />
+      <div class="job">
+        <p class="job-company">Microsoft - XBOX <span class="sep">|</span> <span class="loc">Seattle, WA</span></p>
+        <p class="job-role">Principal Software Engineer, Architect, Xbox <span class="sep">|</span> <span class="dates">September 2024 - Present</span></p>
+        <p>Founding architect of Play Xbox (play.xbox.com) and steward of Xbox.JS, the web platform and monorepo behind Xbox's refreshed web experience, cloud gaming on TVs and VR, and the new Xbox PC app, which launches up to 60% faster. Promoted in 2026 for Xbox.JS stewardship and for advancing agentic software development at Xbox.</p>
+        <ul>
+          <li><b>Platform architecture.</b> Designed an isomorphic React (React Router) application on a hardened Node.js server: SSR with seamless hydration, a relational TanStack Query state layer, lazily instantiated domain systems, an offline-resilient service worker, strict CSP, gamepad and spatial navigation, and hydration-safe localization for every Microsoft-translated locale.</li>
+          <li><b>Monorepo at Xbox scale.</b> Created Xbox.JS and grew it to ~700 packages and 200+ contributing engineers in the past year, shipping web ~4x a week against monthly native release cadences. Led TypeScript 7, Vite 8 / Rolldown, Yarn, and Nx upgrades, cut Storybook startup 12x, and built CI with import-graph test selection and security scanning.</li>
+          <li><b>AI-native developer experience.</b> Conceived and built the Xbox.JS agentic development framework: 65+ skills, 60+ custom agents, MCP servers, and documentation-as-memory projected into author-time context, validation gates, and AI review on every human-authored PR. Created an AI pull request system adopted across 1,400+ PRs (~150 engineer-hours saved).</li>
+          <li><b>Agentic software factory.</b> Founding technical member of Xbox's agentic software factory. Built its baseline spec-to-verified-code harness (sealed holdout tests, parallel agent builds, independent verification and repair), which passed 111 of 112 acceptance checks vs. 74 for single-agent prompting; ported it from web to WinUI 3 and led its self-healing CI loop.</li>
+          <li><b>Cross-org leadership.</b> Moved a native-first organization to a "write once, ship everywhere" web strategy; aligned Commerce, Payments, Xbox Design Lab, and Family Safety on one stack; enabled the first native-host integration (ROG Xbox Ally purchases). Launch SME for the 2026 rollout.</li>
+          <li><b>Scaling expertise.</b> Run 4x/week Office Hours with AI-generated recaps, a weekly "Let's Code With AI" forum (130+ invitees), Build Review, and onboarding series. Across Microsoft: 685 merged PRs and 2,300+ code reviews for 170+ engineers.</li>
+        </ul>
+        <p class="job-role">Principal Software Engineering Lead, Xbox Cloud Gaming <span class="sep">|</span> <span class="dates">December 2021 - September 2024</span></p>
+        <ul>
+          <li>Technical product owner and engineering lead for Xbox Cloud Gaming on the web (xbox.com/play). Led a six-engineer team (hired two senior engineers) and a stewardship model that opened the codebase to partner teams (50+ contributing engineers).</li>
+          <li>Shipped Fortnite free-to-play with no subscription (record concurrency, MAU, in-app revenue, and sign-ups), Xbox social on the web (Guide, profiles, friend invites), Family Safety, search, and cloud-save management; led early planning for Stream Your Own Game.</li>
+          <li>Extended the write-once architecture to Samsung smart TVs, Meta Quest, and handhelds (Logitech G Cloud, Razer Edge, ASUS ROG Ally) with minimal per-device engineering, and created the blueprint for Xbox's cross-device UI platform.</li>
+        </ul>
+        <p class="job-role">Principal Software Engineer, Xbox Cloud Gaming <span class="sep">|</span> <span class="dates">September 2021 - December 2021</span></p>
+        <p class="job-role">Senior Software Engineer, Xbox Cloud Gaming <span class="sep">|</span> <span class="dates">August 2020 - September 2021</span></p>
+        <ul>
+          <li>Founding engineer of Xbox Cloud Gaming in the browser: built the streaming-client integration, server-side and delegated authentication, PWA, and launch flows for the April 2021 beta (Windows, iPhone, iPad) and June 2021 launch to all Game Pass Ultimate members. Promoted to Principal and named team lead in 2021.</li>
+        </ul>
+      </div>
+
+      <hr class="job-divider" />
+
+      <div class="job">
+        <p class="job-company">Amazon - Grand Challenge <span class="sep">|</span> <span class="loc">Seattle, WA</span></p>
+        <p class="job-role">Senior Application Engineer, Amazon Explore <span class="sep">|</span> <span class="dates">May 2016 - August 2020</span></p>
+        <p>Founding technical member and architect of Amazon Explore, a live virtual-tour marketplace for exploring and shopping the world from home, built with WebRTC, isomorphic React, GraphQL, and cloud micro-services across web, mobile, and desktop.</p>
+      </div>
+    </main>
+  </section>
+
+  <!-- ============ PAGE 2 ============ -->
+  <section class="page page-2" aria-label="Resume page 2">
+    <aside class="sidebar">
+      <div class="side-section">
+        <h2 class="side-heading">Expertise</h2>
+        <hr class="dots" />
+
+        <h3 class="sub-heading">Deadly</h3>
+        <ul>
+          <li>Web Platform Architecture</li>
+          <li>TypeScript / JavaScript</li>
+          <li>React &amp; React Router</li>
+          <li>SSR &amp; Hydration</li>
+          <li>Node.js</li>
+          <li>State (TanStack Query)</li>
+          <li>Monorepos (Nx, Yarn)</li>
+          <li>Agentic Engineering</li>
+          <li>Skills, Agents &amp; MCP</li>
+          <li>AI Review &amp; Validation</li>
+          <li>Developer Experience</li>
+          <li>Performance &amp; Profiling</li>
+          <li>Telemetry &amp; Observability</li>
+          <li>Accessibility</li>
+          <li>Design Systems (Storybook, Figma)</li>
+          <li>Responsive UI</li>
+          <li>Unit / Visual / E2E Testing</li>
+          <li>CI / CD &amp; Build Tooling</li>
+          <li>WebRTC Streaming</li>
+        </ul>
+
+        <h3 class="sub-heading">Dangerous</h3>
+        <ul>
+          <li>API / Schema Design</li>
+          <li>Cloud &amp; Micro-Services</li>
+          <li>Web Security (CSP, Auth)</li>
+          <li>Experimentation (ExP)</li>
+          <li>Design &amp; Wireframing</li>
+          <li>Animation &amp; Motion</li>
+        </ul>
+
+        <h3 class="sub-heading">Dabbles &amp; Interests</h3>
+        <ul>
+          <li>Native Hosts (WinUI 3)</li>
+          <li>Game Dev. &amp; Design</li>
+          <li>AR / VR</li>
+          <li>Natural Human Interfaces</li>
+        </ul>
+      </div>
+
+      <div class="side-section">
+        <h2 class="side-heading">Education</h2>
+        <hr class="dots" />
+        <p class="edu-school">Ohio State University<br><span class="edu-loc">Columbus, OH</span></p>
+        <p class="edu-degree">Psychology, Bachelor of Science</p>
+        <p class="edu-degree">Visual Communication &amp; Design, Minor</p>
+      </div>
+    </aside>
+
+    <main class="main">
+      <h2 class="main-heading">Experience <span class="cont">Continued</span></h2>
+      <hr class="dots" />
+      <div class="job">
+        <p class="job-company">Black Flag Studios</p>
+        <p class="job-role">Full-Stack Independent Consultant <span class="sep">|</span> <span class="dates">September 2012 - May 2016</span></p>
+        <p>Consulted end to end for Nike, Amazon, and Bath &amp; Body Works: universal JavaScript applications, Node.js APIs, application architecture, and visual design. Owned most engagements solo, from concept and design through deployment. Also taught at CodeFellows.</p>
+      </div>
+
+      <hr class="job-divider" />
+
+      <div class="job">
+        <p class="job-company">Amazon <span class="sep">|</span> <span class="loc">Seattle, WA</span></p>
+        <p class="job-role">Consultant, Senior Front-End Engineer <span class="sep">|</span> <span class="dates">September 2014 - October 2015</span></p>
+        <p>Shipped consumer-facing components used by millions of Amazon.com customers, built a WYSIWYG campaign-curation tool that replaced hand-edited XML for category pages, and delivered a real-time analytics dashboard for Amazon's Digital Imaging studios.</p>
+      </div>
+
+      <hr class="job-divider" />
+
+      <div class="job">
+        <p class="job-company">Techstars - Nike+ Accelerator <span class="sep">|</span> <span class="loc">Portland, OR</span></p>
+        <p class="job-role">Hacker In Residence <span class="sep">|</span> <span class="dates">April 2013 - June 2013</span></p>
+        <p>Guided startups in the 2013 Nike+ Accelerator; architected Node.js REST APIs and PostgreSQL schemas for an advertising / rewards platform startup.</p>
+      </div>
+
+      <hr class="job-divider" />
+
+      <div class="job">
+        <p class="job-company">Nike - Digital Sport <span class="sep">|</span> <span class="loc">Beaverton, OR</span></p>
+        <p class="job-role">Concept Developer, Nike+ <span class="sep">|</span> <span class="dates">September 2011 - September 2012</span></p>
+        <p>Designed and prototyped experimental Nike+ features, including a full-stack mobile prototyping environment (Node.js, MongoDB, Redis) for user testing.</p>
+      </div>
+
+      <hr class="job-divider" />
+
+      <div class="job">
+        <p class="job-company">Resource Interactive <span class="sep">|</span> <span class="loc">Columbus, OH</span></p>
+        <p class="job-role">Senior Developer, RI:Lab <span class="sep">|</span> <span class="dates">October 2010 - September 2011</span></p>
+        <p class="job-role">Social Media Specialist (Strategist, Lead Engineer) <span class="sep">|</span> <span class="dates">September 2010 - September 2011</span></p>
+        <p class="job-role">Developer, Rich Internet Applications <span class="sep">|</span> <span class="dates">July 2009 - October 2010</span></p>
+        <p>Prototyped real-time multi-user, Kinect, and augmented reality experiences; led social media engineering; built HTML5, Flash, and social experiences for Apple, Victoria's Secret, HP, Kohl's, and P&amp;G. Work earned a Cannes Lions shortlist and FWA Site of the Day.</p>
+      </div>
+
+      <hr class="job-divider" />
+
+      <div class="job">
+        <p class="job-company">Tracermedia Interactive <span class="sep">|</span> <span class="loc">Columbus, OH</span></p>
+        <p class="job-role">Application Developer, Flash Platform <span class="sep">|</span> <span class="dates">June 2008 - July 2009</span></p>
+        <p>3D websites, eCommerce applications, games, and eLearning on the Flash platform, including an Adobe MAX Awards finalist.</p>
+      </div>
+
+      <hr class="job-divider" />
+
+      <div class="job">
+        <p class="job-company">Ohio Supercomputer Center <span class="sep">|</span> <span class="loc">Columbus, OH</span></p>
+        <p class="job-role">Designer, Developer <span class="sep">|</span> <span class="dates">June 2006 - June 2008</span></p>
+        <p>Interactive multimedia and ActionScript 3 tradeshow kiosks.</p>
+      </div>
+    </main>
+  </section>
+
+  <script>
+    (function () {
+      var pageWidth = 816 + 32; // 8.5in page plus breathing room, in CSS pixels
+      function fit() {
+        document.documentElement.style.setProperty('--fit', Math.min(1, window.innerWidth / pageWidth).toFixed(4));
+      }
+      fit();
+      window.addEventListener('resize', fit);
+    })();
+  </script>
+</body>
+
+</html>
